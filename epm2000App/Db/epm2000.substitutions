@@ -1,0 +1,12 @@
+file epm2000chan.template
+{
+pattern { dev           , ch , bus , addr , QM   }
+        { INST:FEE1:201 , A  , 0   , 1    , "\'" }
+        { INST:FEE1:202 , B  , 0   , 1    , "\'" }
+}
+
+file epm2000cont.template
+{
+pattern { dev           , bus , addr , QM   }
+        { INST:FEE1:200 , 0   , 1    , "\'" }
+}
