@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1647
-y 38
+x 2258
+y 245
 w 672
 h 912
 font "helvetica-medium-r-10.0"
@@ -102,10 +102,9 @@ minor 1
 release 0
 x 8
 y 56
-w 168
+w 268
 h 16
 font "helvetica-medium-r-12.0"
-fontAlign "center"
 fgColor index 14
 bgColor index 3
 value {
@@ -1234,10 +1233,9 @@ minor 1
 release 0
 x 344
 y 56
-w 168
+w 268
 h 16
 font "helvetica-medium-r-12.0"
-fontAlign "center"
 fgColor index 14
 bgColor index 3
 value {
@@ -3662,5 +3660,52 @@ offLabel "Configure"
 3d
 useEnumNumeric
 font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Text)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 144
+y 56
+w 104
+h 16
+controlPv "$(cha):DATA.DESC"
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 480
+y 56
+w 104
+h 16
+controlPv "$(chb):DATA.DESC"
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+limitsFromDb
+nullColor index 18
+smartRefresh
+useHexPrefix
+newPos
+objType "monitors"
 endObjectProperties
 
