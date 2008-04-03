@@ -265,6 +265,7 @@ record(ai, "$(dev):MAX") {
 record(ai, "$(dev):DATA") {
   field(SDIS, "$(dev):DATADISVCALC NPP MS")
   field(DISS, "INVALID")
+  field(DESC, "$(DESC)")
 }
 
 record(calc, "$(dev):DATADISVCALC") {
@@ -316,7 +317,7 @@ record(stringin, "$(dev):STATRAW") {
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(743,155,0.8)
+#! View(0,0,0.8)
 #! Record("$(dev):RANGE_MAX",620,980,0,1,"$(dev):RANGE_MAX")
 #! Record("$(dev):RANGE_MIN",440,980,0,1,"$(dev):RANGE_MIN")
 #! Record("$(dev):RANGE",260,980,0,1,"$(dev):RANGE")
@@ -362,7 +363,7 @@ record(stringin, "$(dev):STATRAW") {
 #! Record("$(dev):MAX",1460,794,0,0,"$(dev):MAX")
 #! Field("$(dev):MAX.SDIS",16777215,0,"$(dev):MAX.SDIS")
 #! Link("$(dev):MAX.SDIS","$(dev):STATDISVCALC.VAL")
-#! Record("$(dev):DATA",1200,114,0,0,"$(dev):DATA")
+#! Record("$(dev):DATA",1200,100,0,0,"$(dev):DATA")
 #! Field("$(dev):DATA.SDIS",16777215,0,"$(dev):DATA.SDIS")
 #! Link("$(dev):DATA.SDIS","$(dev):DATADISVCALC.VAL")
 #! Record("$(dev):DATADISVCALC",840,40,0,0,"$(dev):DATADISVCALC")
