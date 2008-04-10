@@ -301,7 +301,7 @@ record(fanout, "$(dev):DATA_MODEFO2") {
 record(stringin, "$(dev):RAW") {
   field(SCAN, "I/O Intr")
   field(DTYP, "stream")
-  field(INP, "@epm2000.proto.db GET_DATA_PULSE($(ch),$(dev),DATA) bus$(bus) $(addr)")
+  field(INP, "@epm2000.proto.db GET_DATA_NOR($(ch),$(dev),DATA) bus$(bus) $(addr)")
 }
 
 record(stringin, "$(dev):AVGRAW") {
@@ -316,12 +316,33 @@ record(stringin, "$(dev):STATRAW") {
   field(INP, "@epm2000.proto.db GET_DATA_STAT($(ch),$(dev),AVG,STDEV,MIN,MAX) bus$(bus) $(addr)")
 }
 
+record(stringin, "$(dev):RAWTH") {
+  field(SCAN, "I/O Intr")
+  field(DTYP, "stream")
+  field(INP, "@epm2000.proto.db GET_DATA_NOR_TH($(ch),$(dev),DATA) bus$(bus) $(addr)")
+  field(TSEL, "@")
+}
+
+record(stringin, "$(dev):STATAVGRAWTH") {
+  field(DTYP, "stream")
+  field(INP, "@epm2000.proto.db GET_DATA_STA_TH($(ch),$(dev),AVG,STDEV,MIN,MAX) bus$(bus) $(addr)")
+  field(DISV, "0")
+}
+
+
+record(calcout, "$(dev):THR_ENABLE") {
+  field(PINI, "YES")
+  field(INPA, "$(thr_enable)")
+  field(CALC, "(A=0)?0:2")
+  field(OUT, "$(dev):STATAVGRAWTH.SCAN")
+}
+
 #! Further lines contain data used by VisualDCT
-#! View(0,0,0.8)
+#! View(0,47,0.8)
 #! Record("$(dev):RANGE_MAX",620,980,0,1,"$(dev):RANGE_MAX")
 #! Record("$(dev):RANGE_MIN",440,980,0,1,"$(dev):RANGE_MIN")
 #! Record("$(dev):RANGE",260,980,0,1,"$(dev):RANGE")
-#! Record("$(dev):DATA_MODE",60,152,0,1,"$(dev):DATA_MODE")
+#! Record("$(dev):DATA_MODE",320,132,0,1,"$(dev):DATA_MODE")
 #! Field("$(dev):DATA_MODE.FLNK",16777215,1,"$(dev):DATA_MODE.FLNK")
 #! Link("$(dev):DATA_MODE.FLNK","$(dev):DATA_MODEFO")
 #! Field("$(dev):DATA_MODE.VAL",16777215,1,"$(dev):DATA_MODE.VAL")
@@ -384,7 +405,7 @@ record(stringin, "$(dev):STATRAW") {
 #! Field("$(dev):STATDISVCALC.INPA",16777215,0,"$(dev):STATDISVCALC.INPA")
 #! Link("$(dev):STATDISVCALC.INPA","$(dev):DATA_MODE.VAL")
 #! Field("$(dev):STATDISVCALC.VAL",16777215,1,"$(dev):STATDISVCALC.VAL")
-#! Record("$(dev):DATA_MODEFO",480,440,0,0,"$(dev):DATA_MODEFO")
+#! Record("$(dev):DATA_MODEFO",580,440,0,0,"$(dev):DATA_MODEFO")
 #! Field("$(dev):DATA_MODEFO.FLNK",16777215,1,"$(dev):DATA_MODEFO.FLNK")
 #! Link("$(dev):DATA_MODEFO.FLNK","$(dev):DATADISVCALC")
 #! Field("$(dev):DATA_MODEFO.LNK1",16777215,1,"$(dev):DATA_MODEFO.LNK1")
@@ -401,3 +422,9 @@ record(stringin, "$(dev):STATRAW") {
 #! Record("$(dev):RAW",60,460,0,1,"$(dev):RAW")
 #! Record("$(dev):AVGRAW",60,580,0,1,"$(dev):AVGRAW")
 #! Record("$(dev):STATRAW",60,700,0,1,"$(dev):STATRAW")
+#! Record("$(dev):RAWTH",240,465,0,1,"$(dev):RAWTH")
+#! Record("$(dev):STATAVGRAWTH",260,612,0,1,"$(dev):STATAVGRAWTH")
+#! Field("$(dev):STATAVGRAWTH.SDIS",16777215,1,"$(dev):STATAVGRAWTH.SDIS")
+#! Link("$(dev):STATAVGRAWTH.SDIS","$(dev):THR_ENABLE.VAL")
+#! Record("$(dev):THR_ENABLE",280,785,0,1,"$(dev):THR_ENABLE")
+#! Field("$(dev):THR_ENABLE.VAL",16777215,1,"$(dev):THR_ENABLE.VAL")

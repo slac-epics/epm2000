@@ -25,14 +25,14 @@ EPM2000=$(EPICS_MODULES)/epm2000/$(EPM2000_MODULE_VERSION)
 
 
 (3) Create a EPM2000 substitution database file. See example file in 
-    epm2000App/Db/epm2000.substitutions
+    epm2000App/Db/epm2000example.substitutions
 
 II - Adding EPM2000 support to your IOC startup file:
 -----------------------------------------------
 
-(1) Add epm2000 database to st.cmd (before iocInit):
+(1) Add your epm2000 database to st.cmd (before iocInit):
 
-    dbLoadRecords("db/epm2000.db")
+    dbLoadRecords("db/<filename>.db")
 
 (2) Add Location of stream protocol files
 

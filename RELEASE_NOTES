@@ -9,3 +9,5 @@
 #==============================================================
 #
 epm2000-R1-0-0:   Initial release.
+
+epm2000-R1-0-1:   Added support for Thermopile sensor and simplified database template.

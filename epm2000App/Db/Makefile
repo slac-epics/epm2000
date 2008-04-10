@@ -11,9 +11,7 @@ include $(TOP)/configure/CONFIG
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
 DB += epm2000.proto.db
-DB += epm2000chan.template
-DB += epm2000cont.template
-
+DB += epm2000.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
