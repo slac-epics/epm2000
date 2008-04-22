@@ -4,25 +4,25 @@
 
 
 record(ai, "$(dev):RANGE_MAX") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_RANGE_MAX($(ch)) bus$(bus) $(addr)")
 }
 
 record(ai, "$(dev):RANGE_MIN") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_RANGE_MIN($(ch)) bus$(bus) $(addr)")
 }
 
 record(ai, "$(dev):RANGE") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_RANGE($(ch)) bus$(bus) $(addr)")
 }
 
 record(mbbi, "$(dev):DATA_MODE") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_MODE($(ch)) bus$(bus) $(addr)")
   field(ZRVL, "1")
@@ -40,7 +40,7 @@ record(mbbi, "$(dev):DATA_MODE") {
 }
 
 record(ai, "$(dev):TRIG_RISET") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_TRIG_RISETIME($(ch)) bus$(bus) $(addr)")
   field(EGU, "msec")
@@ -56,7 +56,7 @@ record(mbbo, "$(dev):TRIG_RISETDES") {
 }
 
 record(mbbi, "$(dev):PROB_TYPE") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_PROB_TYPE($(ch)) bus$(bus) $(addr)")
   field(ZRST, "PYRO")
@@ -84,13 +84,13 @@ record(ao, "$(dev):RANGEDES") {
 record(ai, "$(dev):RESP_THER") {
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_RESP_THER($(ch)) bus$(bus) $(addr)")
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
 }
 
 record(ai, "$(dev):RESP_PYRO") {
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_RESP_PYRO($(ch)) bus$(bus) $(addr)")
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
 }
 
 record(ao, "$(dev):RESP_PYRODES") {
@@ -109,14 +109,14 @@ record(ai, "$(dev):STA_BATCH") {
   field(DESC, "Lkshr340, identification")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_STA_BATCH($(ch)) bus$(bus) $(addr)")
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
 }
 
 record(ai, "$(dev):AVG_BATCH") {
   field(DESC, "Lkshr340, identification")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_AVG_BATCH($(ch)) bus$(bus) $(addr)")
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
 }
 
 record(ao, "$(dev):STA_BATCHDES") {
@@ -140,7 +140,7 @@ record(mbbo, "$(dev):DATA_MODEDES") {
 }
 
 record(mbbi, "$(dev):UNITS") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_UNITS($(ch)) bus$(bus) $(addr)")
   field(ZRST, "VOLTS")
@@ -166,7 +166,7 @@ record(mbbo, "$(dev):UNITSDES") {
 }
 
 record(ai, "$(dev):TRIG_HOLD") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_TRIG_HOLDOFF($(ch)) bus$(bus) $(addr)")
   field(EGU, "msec")
@@ -181,7 +181,7 @@ record(ao, "$(dev):TRIG_HOLDDES") {
 }
 
 record(ai, "$(dev):TRIG_LEV") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_TRIG_LEVEL($(ch)) bus$(bus) $(addr)")
   field(EGU, "%")
@@ -205,7 +205,7 @@ record(mbbo, "$(dev):TRIG_SRCDES") {
 }
 
 record(mbbi, "$(dev):TRIG_SRC") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_TRIG_SRC($(ch)) bus$(bus) $(addr)")
   field(ZRST, "INTERNAL")
@@ -217,7 +217,7 @@ record(mbbi, "$(dev):TRIG_SRC") {
 record(ai, "$(dev):WLEN_COMP") {
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_WLEN_COMP($(ch)) bus$(bus) $(addr)")
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
 }
 
 record(ao, "$(dev):WLEN_COMPDES") {
@@ -228,7 +228,7 @@ record(ao, "$(dev):WLEN_COMPDES") {
 }
 
 record(mbbi, "$(dev):STA_MODE") {
-  field(SCAN, "5 second")
+  field(SCAN, "$(dev_scan)")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_STA_MODE($(ch)) bus$(bus) $(addr)")
   field(ZRST, "AUTO")
