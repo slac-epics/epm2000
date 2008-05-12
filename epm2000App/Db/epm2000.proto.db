@@ -31,8 +31,10 @@ SET_DATABUFFDPTH    { out "OUT DEP %i"; 							wait 20; }
 GET_DATABUFFRAW     { out "OUT DUMP"; 								wait 1000; }
 GET_DATA_NOR        { 				in "\$1:PUL=%(\$2:\$3.VAL)E%(\$2:\$3.EGU)s"; }
 GET_DATA_NOR_TH     { 				in "\$1:THR=%(\$2:\$3.VAL)E%(\$2:\$3.EGU)s"; }
+GET_DATA_NOR_EPM1K  { 				in "PUL=%(\$2:\$3.VAL)E%(\$2:\$3.EGU)s"; }
 GET_DATA_STAT       { 				in "\$1:AVG=%(\$2:\$3.VAL)E%(\$2:\$3.EGU)1c,MIN=%(\$2:\$5.VAL)E%(\$2:\$5.EGU)1c,MAX=%(\$2:\$6.VAL)E%(\$2:\$6.EGU)1c,DEV=%(\$2:\$4.VAL)E%(\$2:\$4.EGU)1c"; }
 GET_DATA_STA_TH     { 				in ",AVG=%(\$2:\$3.VAL)E%(\$2:\$3.EGU)1c,DEV=%(\$2:\$4.VAL)E%(\$2:\$4.EGU)1c"; }
+GET_DATA_STAT_EPM1K { 				in "AVG=%(\$2:\$3.VAL)E%(\$2:\$3.EGU)1c,MIN=%(\$2:\$5.VAL)E%(\$2:\$5.EGU)1c,MAX=%(\$2:\$6.VAL)E%(\$2:\$6.EGU)1c,DEV=%(\$2:\$4.VAL)E%(\$2:\$4.EGU)1c"; }
 GET_DATA_AVG        { 				in "\$1:%(\$2:\$3.VAL)E%(\$2:\$3.EGU)s"; }
 GET_EXTRATEXT       { 				in "%39c"; }
 
