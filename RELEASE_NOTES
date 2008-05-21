@@ -8,6 +8,9 @@
 #
 #==============================================================
 #
+epm2000-R1-0-3:   Added support from EPM1000, a single channel version. Note: Avg Mode 
+                  does not match out dump data string.
+
 epm2000-R1-0-2:   Added support for a single channel device. Users of single channel 
                   devices can disable ch(x) by setting ch(x)_scan to Passive in the 
                   subsitutions file, see epm2000example.substitutions.
