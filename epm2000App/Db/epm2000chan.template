@@ -135,8 +135,8 @@ record(mbbo, "$(dev):DATA_MODEDES") {
   field(DTYP, "stream")
   field(OUT, "@epm2000.proto.db SET_MODE($(ch)) bus$(bus) $(addr)")
   field(ZRST, "NORMAL")
-  field(ONST, "AVERAGE")
-  field(TWST, "STATISTICS")
+  field(ONST, "STATISTICS")
+#!  field(TWST, "AVERAGE")
 }
 
 record(mbbi, "$(dev):UNITS") {
@@ -341,6 +341,7 @@ record(stringin, "$(dev):STATAVGRAW1K") {
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_DATA_STA_EPM1K($(ch),$(dev),AVG,STDEV,MIN,MAX) bus$(bus) $(addr)")
   field(DISV, "0")
+  field(SCAN, "I/O Intr")
 }
 
 
@@ -348,7 +349,6 @@ record(stringin, "$(dev):RAW1K") {
   field(SCAN, "I/O Intr")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_DATA_NOR_EPM1K($(ch),$(dev),DATA) bus$(bus) $(addr)")
-  field(TSEL, "@")
 }
 
 #! Further lines contain data used by VisualDCT
