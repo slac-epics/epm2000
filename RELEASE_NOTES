@@ -15,6 +15,9 @@
 
 #==============================================================
 #
+epm2000-R2-1-0:   Build with base-R3-14-8-2-lcls5
+                  Build with rtems-4.9.3
+
 epm2000-R2-0-0:   Build with base-R3-14-8-2-lcls3 (RTEMS-4.9.1)
 
 epm2000-R1-0-3:   Added support from EPM1000, a single channel version. Note: Avg Mode 
