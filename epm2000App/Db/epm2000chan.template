@@ -320,7 +320,6 @@ record(stringin, "$(dev):RAWTH") {
   field(SCAN, "I/O Intr")
   field(DTYP, "stream")
   field(INP, "@epm2000.proto.db GET_DATA_NOR_TH($(ch),$(dev),DATA) bus$(bus) $(addr)")
-  field(TSEL, "@")
 }
 
 record(stringin, "$(dev):STATAVGRAWTH") {
