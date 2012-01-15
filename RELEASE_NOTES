@@ -19,6 +19,8 @@
 #
 #==============================================================
 #
+epm2000-R2-2-2:   clean up unneeded directories; RELEASE file modified to work with eco
+  
 epm2000-R2-2-1:   Removed TSEL=@ bug
 		  Build with base-R3-14-8-2-lcls6
                   Build with rtems-4.9.4

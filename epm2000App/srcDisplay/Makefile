@@ -5,11 +5,14 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 
+# Rules for installing EDM files:
+CFG +=  CONFIG_EDL
+
 # EDM Screens to install
 # You can override the default installation path.
 #INSTALL_LOCATION=
 
-EDLS += epm2000.edl
+EDL += epm2000.edl
 
 # Install images to be used by EDM (Gif and Png are supported)
 # PNG is better and preferred.
