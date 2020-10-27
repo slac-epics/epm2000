@@ -6,7 +6,7 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 
 # Rules for installing EDM files:
-CFG +=  CONFIG_EDL
+#CFG +=  CONFIG_EDL
 
 # EDM Screens to install
 # You can override the default installation path.
